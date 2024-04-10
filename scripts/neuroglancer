@@ -44,7 +44,7 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-neuroglancer.set_server_bind_address('0.0.0.0')
+neuroglancer.set_server_bind_address('localhost', bind_port=4444)
 viewer = neuroglancer.Viewer()
 
 def to_slice(slice_str):
